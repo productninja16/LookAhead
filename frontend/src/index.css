@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+
+  --color-ink: #0f2a2b;
+  --color-muted: #5b706f;
+  --color-line: #e3e9e6;
+  --color-canvas: #f7f6f1;
+  --color-card: #ffffff;
+  --color-forest: #0d3b3c;
+  --color-forest-soft: #14595a;
+  --color-teal: #0f8b7f;
+  --color-mint: #e4f5ef;
+  --color-mint-deep: #5eead4;
+  --color-yes: #17895d;
+  --color-yes-bg: #e5f5ed;
+  --color-caution: #b86a05;
+  --color-caution-bg: #fdf1dc;
+  --color-stop: #c2312c;
+  --color-stop-bg: #fce9e7;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.28s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+}

@@ -1,0 +1,12 @@
+**/node_modules
+**/.venv
+**/__pycache__
+frontend/dist
+backend/data
+backend/tests
+backend/evals
+.git
+.playwright-mcp
+docs
+*.png
+.env*
